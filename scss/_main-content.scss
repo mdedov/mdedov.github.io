@@ -1,0 +1,50 @@
+.portfolio {
+  padding: 2rem 0;
+  &__content {
+
+  }
+  &__item {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 2px solid #0c66c5;
+    transition: .3s all;
+  }
+  &__pic {
+    flex-basis: 40%;
+    overflow: hidden;
+    max-height: 250px;
+  }
+  &__img {
+    max-width: 100%;
+  }
+  &__desc {
+    flex-basis: 60%;
+    padding-left: 20px;
+  }
+  &__name {
+    margin-bottom: 10px;
+  }
+  &__work {
+    margin-bottom: 10px;
+  }
+  &__tehno {
+    margin-bottom: 10px;
+  }
+  &__link {
+    padding: 10px 15px;
+    background: #0c66c5;
+    color: #fff;
+    display: inline-block;
+    border: 2px solid #0c66c5;
+    border-radius: 10px;
+    transition: .3s all;
+    &:hover {
+      background: #fff;
+      color: #0c66c5;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio {
+    // &__item {
+    //   display: block;
+    // }
+    &__content {
+    }
+    &__item {
+      flex-direction: column;
+    }
+    &__pic {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+    &__desc {
+      flex-basis: 100%;
+      padding-left: 0;
+    }
+  }
+}
