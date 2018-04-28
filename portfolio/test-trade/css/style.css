@@ -3,6 +3,7 @@
   src: url(../fonts/PFDinTextPro2.ttf); }
 
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -78,8 +79,9 @@ a {
     z-index: 1; }
   .choose .container {
     height: 100%;
-    display: -webkit-flex;
     display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
   .choose__content {
     margin: auto 0;
@@ -90,16 +92,21 @@ a {
     font-weight: 300;
     text-align: center; }
   .choose__types {
-    display: -webkit-flex;
     display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
 
 .types {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
   .types__item {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
     background: rgba(255, 255, 255, 0.6);
     position: relative;
@@ -125,10 +132,12 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
     border: 1px solid transparent;
+    -webkit-transition: .3s;
     transition: .3s; }
   .types__pic {
     margin-bottom: 2rem; }
@@ -142,6 +151,7 @@ a {
   min-height: 100%;
   width: 100%;
   background-size: cover;
+  background-attachment: fixed;
   z-index: 2; }
   .info__header {
     position: relative; }
@@ -154,11 +164,13 @@ a {
       background-color: #b5b5b5;
       opacity: 0.75; }
   .info__names {
-    display: -webkit-flex;
     display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
   .info__item {
     position: relative;
+    -ms-flex-preferred-size: 33.333%;
     flex-basis: 33.333%;
     text-align: center;
     font-size: 1.75rem;
@@ -166,6 +178,7 @@ a {
     opacity: 0.8;
     padding: 45px 0;
     cursor: pointer;
+    -webkit-transition: all .3s;
     transition: all .3s;
     z-index: 2; }
     .info__item:hover {
@@ -208,12 +221,15 @@ a {
   .desc__list {
     margin-bottom: 40px; }
     .desc__list-item {
-      display: -webkit-flex;
       display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       position: relative;
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
       .desc__list-item:last-child {
         margin-bottom: 0; }
     .desc__list-number {
@@ -232,6 +248,7 @@ a {
     font-size: 1.125rem;
     font-weight: 500;
     border-radius: 3px;
+    -webkit-transition: all .3s;
     transition: all .3s; }
     .desc__link:hover {
       background-color: #006b58; }
@@ -261,6 +278,7 @@ a {
   .types {
     display: block; }
     .types__item {
+      -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
       width: 100%;
       border-radius: 0;
@@ -277,12 +295,14 @@ a {
         height: 10px;
         top: 50%;
         left: auto;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         right: 15px;
         border: none; }
       .types__item:last-child {
         margin-bottom: 0; }
       .types__item--active:after {
+        -webkit-transform: translateY(-50%) rotate(180deg);
         transform: translateY(-50%) rotate(180deg); }
     .types__pic {
       margin-right: 19px;
@@ -297,10 +317,14 @@ a {
       width: 100%;
       top: 0;
       left: 0;
-      display: -webkit-flex;
       display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-transform: none;
       transform: none;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 20px; }
     .types__text {
@@ -310,7 +334,8 @@ a {
     .info__header {
       display: none; }
     .info__desc {
-      padding-top: 45px; }
+      padding-top: 45px;
+      padding-bottom: 0; }
       .info__desc .container {
         padding: 0; }
       .info__desc .types__item {

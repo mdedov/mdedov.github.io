@@ -21,18 +21,6 @@ $('.types__item.js-type-show').click(function () {
     //add nice scroll (for block info)
     $('body').niceScroll();
 
-
-    //height tabs
-    var maxHeight = 0;
-    $('.desc').each(function(){
-       var thisH = $(this).height();
-       if (thisH > maxHeight) { maxHeight = thisH; }
-    });
-    $('.desc').height(maxHeight);
-
-
-
-
   }
 
 
