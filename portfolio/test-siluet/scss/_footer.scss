@@ -1,0 +1,30 @@
+.footer {
+  padding-bottom: 20px;
+  .container {
+    .row {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+    }
+  }
+  &__first, &__second, &__third-top, &__third-bottom {
+    padding: 20px;
+    color: #fff;
+  }
+  &__first {
+    ul {
+      column-count: 2;
+    }
+  }
+   &__third {
+     position: relative;
+     height: 100%;
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     flex-direction: column;
+   }
+   &__third-bottom {
+     margin-top: auto;
+   }
+}

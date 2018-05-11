@@ -1,0 +1,62 @@
+.header {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    background: #dcdcdc;
+
+    margin-bottom: 0;
+    .container {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__first, &__second, &__third {
+    height: 108px;
+  }
+  &__third {
+    text-align: right;
+    padding: 20px;
+  }
+}
+.phone, .email {
+  color: #fff;
+  display: inline-block;
+}
+.email {
+  text-decoration: underline;
+}
+
+.header, .main-container {
+  .container {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #777;
+      left: 15px;
+      right: 15px;
+      display: block;
+    }
+  }
+}
+.header {
+  .container {
+    &:after {
+      bottom: -20px;
+    }
+  }
+}
+.main-container {
+  .container {
+    &:after {
+      bottom: -35px;
+    }
+  }
+}
